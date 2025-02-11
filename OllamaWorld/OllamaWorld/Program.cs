@@ -11,7 +11,7 @@ var kernel = builder.Build();
 var chatService = kernel.GetRequiredService<IChatCompletionService>();
 
 
-kernel.Plugins.AddFromType<CarsPlugin>("Cars");
+kernel.Plugins.AddFromType<MaterialsPlugin>("Materials");
 
 OpenAIPromptExecutionSettings openAIPromptExecutionSettings = new()
 {
@@ -20,7 +20,9 @@ OpenAIPromptExecutionSettings openAIPromptExecutionSettings = new()
 
 
 var history = new ChatHistory();
-history.AddSystemMessage("You are a helpful assistant chatbot at the parking lot [BIG].");
+history.AddSystemMessage("You are a helpful assistant chatbot for checking materials at the constructionn site [BIG].");
+history.AddSystemMessage("Check the list of materials.");
+history.AddSystemMessage("Answer only based on the material list.");
 
 Console.WriteLine("Welcome to [BIG]");
 Console.WriteLine("Type 'exit' to exit the chatbot\n");

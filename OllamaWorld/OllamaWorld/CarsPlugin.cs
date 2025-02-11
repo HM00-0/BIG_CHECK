@@ -45,6 +45,17 @@ namespace Ollamaworld
                 IsIn = true,
                 place_number = 3,
                 place_sector = 'A'
+            },
+            new CarsModel
+            {
+                Id = "4",
+                name = "Hyundai",
+                Model = "Casper",
+                Color = "Blue",
+                car_number = 0211,
+                IsIn = true,
+                place_number = 7,
+                place_sector = 'A'
             }
         };
 
